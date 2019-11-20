@@ -1,9 +1,58 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Adopta un animal
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <img class="icon" src="assets/PERRO.png" alt="">
+  <ion-item>
+    <ion-label position="floating">¿Cuál es su nombre?</ion-label>
+    <ion-input type="text" name="NombreUsuario" [(ngModel)]="NombreUsuario"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">¿Qué edad tiene?</ion-label>
+    <ion-input type="text" name="Edad" [(ngModel)]="Edad"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">¿Cuál es su numero telefonico?</ion-label>
+    <ion-input type="text" name="Telefono" [(ngModel)]="Telefono"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">¿Cuál es su direccón?</ion-label>
+    <ion-input type="text" name="Direccion" [(ngModel)]="Direccion"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">¿Cuál es su correo electronico?</ion-label>
+    <ion-input type="email" name="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">¿Cuántas mascotas tiene en casa?</ion-label>
+    <ion-input type="number" name="NoMascotas" [(ngModel)]="NoMascotas"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>¿Tiene patio?</ion-label>
+    <ion-checkbox type="checkbox" name="Patio" [(ngModel)]="Patio"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">¿Porqué quiere adoptar una mascota?</ion-label>
+    <ion-input type="text" name="Razon" [(ngModel)]="Razon"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating">¿Cuales alergias tiene? (Ignore si no tiene)</ion-label>
+      <ion-input type="text" name="Alergias" [(ngModel)]="Alergias"></ion-input>
+    </ion-item>
+  <ion-item>
+    <ion-label position="floating">¿Cuanto tiempo libre tiene al dia? (En horas)</ion-label>
+    <ion-input type="number" name="TiempoLibre" [(ngModel)]="TiempoLibre"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating">¿Como se llama la mascota a adoptar?</ion-label>
+      <ion-input type="text" name="NombreMascota" [(ngModel)]="NombreMascota"></ion-input>
+    </ion-item>
+  <br>
+  <ion-button expand="block" class="mt-5" color="primary" (click)="onSubmitRegister()"><ion-text color="light">Terminar formulario</ion-text></ion-button>
+  <br>
+</ion-content>
