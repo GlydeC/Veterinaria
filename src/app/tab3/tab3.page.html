@@ -7,5 +7,10 @@
 </ion-header>
 
 <ion-content>
-  
+  <ion-content class="ion-text-center" >
+    <h2 >Tomar foto</h2>
+    <ion-img *ngIf="!fotoObtenida" src="assets/placeholderPhoto.png" class="foto"></ion-img>
+    <ion-text *ngIf="esNavegador" class="ion-margin ion-margin-top">Te encuentras en un navegador</ion-text>
+    <ion-img [src]="base64Img" *ngIf="fotoObtenida" class="foto"></ion-img>
+    <ion-button (click)="capturarFoto()" class="ion-margin-top" [disabled]="esNavegador" color="danger">Capturar</ion-button>
 </ion-content>

@@ -13,7 +13,7 @@ export class Tab1Page {
   audio = new Audio();
   tiempoAudio: any;
 
-  Animales:Animal[] = [
+  public Animales:Animal[] = [
     
    { 
     Nombre : "Perro",

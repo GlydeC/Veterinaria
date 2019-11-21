@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Formulario } from 'src/models/Formulario'
+import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 
 @Component({
   selector: 'app-tab2',
@@ -22,11 +23,13 @@ export class Tab2Page {
   private  TiempoLibre: number=null;
   private  NombreMascota: string="";
 
-  public Formularios: Formulario[]= [];
-  public FormularioBorrador: Formulario = null;
+  Formularios: Formulario[]= [];
+  FormularioBorrador: Formulario;
 
   onSubmitRegister(){
     console.log(this.NombreUsuario, this.Edad,this.Telefono, this.Direccion, this.email, this.NoMascotas, this.Patio, this.Razon, this.Alergias, this.TiempoLibre, this.NombreMascota);
+    
+    this.FormularioBorrador=new Formulario();
     this.FormularioBorrador.NombreUsuario=this.NombreUsuario;
     this.FormularioBorrador.Edad=this.Edad;
     this.FormularioBorrador.Telefono=this.Telefono;

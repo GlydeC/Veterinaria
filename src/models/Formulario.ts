@@ -1,4 +1,4 @@
-export class Preguntas {
+export class Formulario {
     NombreUsuario: string;
     Edad: string;
     Telefono: string;
